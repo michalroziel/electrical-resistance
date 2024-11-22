@@ -2,11 +2,29 @@
 #include "formulas.h"
 
 
-	void start(void){
+	float computeParallelResistance(int restistanceAmount) {
 
+		int input;
+		int resistanceSum;
+
+		for (int i=0; i < restistanceAmount; i++) {
+
+
+
+		}
+
+
+
+
+	}
+
+
+
+
+
+	void start(void){
 	int loopW = 0 ;
 	int loopS = 0;
-
 	int n;
 	char schaltung;
 
