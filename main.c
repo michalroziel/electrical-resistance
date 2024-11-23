@@ -11,10 +11,9 @@ int main(void){
 
 	printf("your choice was : %d \n\n\n",input);
 
-	start();
-	
-
-
+	//start();
+	//computeSeriesResistance(4);
+	computeParallelResistance(3);
 
  	return 0;
 }

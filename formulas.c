@@ -2,22 +2,34 @@
 #include "formulas.h"
 
 
-	float computeParallelResistance(int restistanceAmount) {
-
+	int computeSeriesResistance(int restistanceAmount) {
 		int input;
-		int resistanceSum;
+		int resistanceSum=0;
 
 		for (int i=0; i < restistanceAmount; i++) {
-
-
-
+			printf("Bitte Widerstand %d angeben :  \n", i);
+			scanf(" %d", &input);
+			resistanceSum +=input;
 		}
+		printf("Der Resultierende Widerstand beträgt: %d \n", resistanceSum);
 
-
-
-
+		return resistanceSum;
 	}
 
+	float computeParallelResistance(int resistanceAmount) {
+		int input;
+		float resistanceSum = 0.0f;
+
+		for (int i = 0; i < resistanceAmount; i++) {
+			printf("Bitte Widerstand %d angeben :  \n", i);
+			scanf(" %d", &input);
+
+			resistanceSum += (float) 1/input;
+		}
+
+		printf("Der Resultierende Widerstand beträgt: %.2f", resistanceSum);
+		return resistanceSum;
+	}
 
 
 
