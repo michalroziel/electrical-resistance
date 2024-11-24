@@ -2,7 +2,7 @@
 #include "formulas.h"
 
 
-	int computeSeriesResistance(int restistanceAmount) {
+	int computeSerialResistance(int restistanceAmount) {
 		int input;
 		int resistanceSum=0;
 
@@ -11,7 +11,7 @@
 			scanf(" %d", &input);
 			resistanceSum +=input;
 		}
-		printf("Der Resultierende Widerstand beträgt: %d \n", resistanceSum);
+		printf("Der Resultierende Widerstand beträgt: %d \n Ohm", resistanceSum);
 
 		return resistanceSum;
 	}
@@ -27,8 +27,8 @@
 			resistanceSum += (float) 1/input;
 		}
 
-		printf("Der Resultierende Widerstand beträgt: %.2f", resistanceSum);
-		return resistanceSum;
+		printf("Der Resultierende Widerstand beträgt: %.2f Ohm", 1/resistanceSum);
+		return 1/resistanceSum;
 	}
 
 
@@ -69,10 +69,16 @@
 		switch (inputS) {
 			case 'S':
 				schaltung = 'S';
+				printf("Die Art der Ausgewählten Schaltung ist : Seriell \n");
+				computeSerialResistance(n);
+
 				loopS = 1;
 				break;
 			case 'P':
 				schaltung = 'P';
+				printf("Die Art der Ausgewählten Schaltung ist : Parallel \n");
+				computeParallelResistance(n);
+
 				loopS = 1;
 				break;
 			default:
@@ -81,6 +87,6 @@
 
 	}
 
-		printf("Die Art der Ausgewählten Schaltung ist : %c", schaltung);
+
 	
 }
